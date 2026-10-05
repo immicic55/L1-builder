@@ -69,7 +69,19 @@
     </section>
 
     <section class="start section" id="start" aria-labelledby="start-heading">
-      <div class="start-top"><h2 id="start-heading">Your next<br>starting point<span>.</span></h2><div><p>Start with the boot-core development image. Build the source, boot a virtual machine, and get to know the system.</p><a class="button button-dark" href="#build-guide">Get the build instructions <span aria-hidden="true">↘</span></a></div></div>
+      <div class="start-top">
+        <h2 id="start-heading">Your next<br>starting point<span>.</span></h2>
+        <div class="download-content">
+          <p>Start with the boot-core development image. Build the source, boot a virtual machine, and get to know the system.</p>
+          <a class="button button-dark" href="https://www.mediafire.com/file/s842hg0id9cb1p2/ltr-build-tools-sources.tar.zst/file">Download build-tool sources <span aria-hidden="true">↓</span></a>
+          <p class="download-meta">Source package · 616.2 MiB · Hosted on MediaFire</p>
+          <div class="download-links">
+            <a href="https://www.mediafire.com/file/cwkgqrh4hagf4fv/ltr-build-tools-sources.tar.zst.sha256/file">SHA-256 checksum</a>
+            <a href="#build-guide">Build instructions ↘</a>
+          </div>
+          <p class="download-meta">Build outputs and caches excluded. Dependencies may need downloading.</p>
+        </div>
+      </div>
       <div class="build-guide" id="build-guide"><div class="build-header"><h3>Build from source</h3><div class="architecture" role="group" aria-label="Build architecture"><button type="button" aria-pressed="true" data-arch="x86_64">x86_64</button><button type="button" aria-pressed="false" data-arch="i686">i686</button></div></div><div class="command"><code id="build-command">./build-all.sh --all</code><button id="copy" type="button">Copy <span aria-hidden="true">↗</span></button></div><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p><p>Run in the project root on an Artix host with Python 3.12+, a working GCC toolchain, pacman metadata, bsdtar, curl and network access.</p><p class="output-path">OUTPUT <code id="output-path">out/lighting-the-rain-transform-x86_64-boot-core.iso</code></p></div>
       <div class="release-notes"><h3>Before you boot</h3><div><details><summary>What’s in the image? <span aria-hidden="true">+</span></summary><p>Linux, musl, BusyBox, dash, s6, Limine, LPM, wired DHCP, curl/LibreSSL, OpenSSH, console Vim, libarchive, selected firmware and BIOS/UEFI installation tools.</p></details><details><summary>What’s still in development? <span aria-hidden="true">+</span></summary><p>This is a boot-core development image. Wi-Fi/iwd, mdevd, privilege tools and the on-target compiler SDK still need integration. The host bootstrap currently targets Artix.</p></details><details><summary>How do I test it? <span aria-hidden="true">+</span></summary><p>After building, run <code>python3 tools/boot_test.py</code> for the BIOS smoke test, or add <code>--uefi</code> for UEFI. The live image uses an unauthenticated local development console; no SSH server is enabled.</p></details></div></div>
     </section>
