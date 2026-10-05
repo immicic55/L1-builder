@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151613">
+  <meta name="description" content="Lighting the Rain Transform. A source-built Linux distro with musl, dash, s6 and its own package manager. Explore the boot-core development image.">
+  <title>LTR — Lighting the Rain Transform</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="intro" aria-hidden="true">
+    <div class="intro-box"><img src="assets/logo.svg" alt=""></div>
+    <div class="intro-box"><img src="assets/logo.svg" alt=""></div>
+    <div class="intro-box"><img src="assets/logo.svg" alt=""></div>
+    <span class="intro-name">LIGHTING THE RAIN TRANSFORM</span>
+  </div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Lighting the Rain Transform home"><img src="assets/logo.svg" alt=""><span>LTR<span class="brand-dot">.</span></span></a>
+    <nav aria-label="Main navigation"><a href="#philosophy">Philosophy</a><a href="#system">The system</a><a href="#start" class="nav-cta">Build LTR <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-copy">
+        <h1 id="hero-heading">Small core.<br>Open skies<span class="accent">.</span></h1>
+        <p class="full-name">Lighting the Rain Transform</p>
+        <p class="hero-description">Linux, brought back to its elements.<br>Built from source. Made to be understood.<br>Yours to transform.</p>
+        <a href="#system" class="button button-orange">Explore the system <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="scene-wrap">
+        <div class="orbital orbital-one" aria-hidden="true"></div><div class="orbital orbital-two" aria-hidden="true"></div>
+        <span class="scene-coordinate coordinate-top" aria-hidden="true">LTR / CORE ASSEMBLY</span>
+        <div class="scene" role="img" aria-label="Three burnt-orange 3D blocks bearing the LTR logo, representing musl, dash and s6">
+          <div class="sculpture">
+            <div class="block block-one"><div class="face front"><img src="assets/logo.svg" alt=""><span>musl</span></div><div class="face back"></div><div class="face right"></div><div class="face left"></div><div class="face top"><img src="assets/logo.svg" alt=""></div><div class="face bottom"></div></div>
+            <div class="block block-two"><div class="face front"><img src="assets/logo.svg" alt=""><span>dash</span></div><div class="face back"></div><div class="face right"></div><div class="face left"></div><div class="face top"><img src="assets/logo.svg" alt=""></div><div class="face bottom"></div></div>
+            <div class="block block-three"><div class="face front"><img src="assets/logo.svg" alt=""><span>s6</span></div><div class="face back"></div><div class="face right"></div><div class="face left"></div><div class="face top"><img src="assets/logo.svg" alt=""></div><div class="face bottom"></div></div>
+          </div>
+        </div>
+        <div class="scene-controls"><span>DRAG TO ROTATE</span><button type="button" id="rotate" aria-label="Rotate the 3D blocks">Rotate <span aria-hidden="true">↻</span></button><button type="button" id="explode" aria-pressed="false">Separate <span aria-hidden="true">+</span></button></div>
+      </div>
+      <div class="hero-footer"><a href="#philosophy">Scroll to discover <span aria-hidden="true">↓</span></a><span><i class="status-dot"></i> BOOT-CORE / IN DEVELOPMENT</span><span class="hero-platform">x86_64 + i686</span></div>
+    </section>
+
+    <section class="philosophy section" id="philosophy" aria-labelledby="philosophy-heading">
+      <div class="section-side"><span class="small-label">The philosophy</span><span class="side-mark" aria-hidden="true">↙</span></div>
+      <div class="philosophy-content"><h2 id="philosophy-heading">Understand the core.<br><span class="muted">Shape everything<br>around it.</span></h2><div class="philosophy-bottom"><p>A system is easier to make your own when you know what holds it together. LTR starts with a deliberate base: musl, dash and s6. Source-built, with the pieces in plain sight.</p><p>GNU tools are permitted on the build host. The target image excludes GNU tools and runtime libraries. A small foundation, with room for your decisions.</p></div></div>
+    </section>
+
+    <section class="system section" id="system" aria-labelledby="system-heading">
+      <div class="system-heading"><h2 id="system-heading">Three elements.<br>One foundation.</h2><p>Each piece has a purpose.<br>Explore what makes the base.</p></div>
+      <div class="system-layout">
+        <div class="component-list" role="tablist" aria-label="System components" aria-orientation="vertical">
+          <button class="component active" role="tab" id="tab-musl" aria-controls="component-panel" aria-selected="true" data-component="musl"><span class="component-name">musl</span><span>C standard library</span><span aria-hidden="true">↗</span></button>
+          <button class="component" role="tab" id="tab-dash" aria-controls="component-panel" aria-selected="false" tabindex="-1" data-component="dash"><span class="component-name">dash</span><span>Command shell</span><span aria-hidden="true">↗</span></button>
+          <button class="component" role="tab" id="tab-s6" aria-controls="component-panel" aria-selected="false" tabindex="-1" data-component="s6"><span class="component-name">s6</span><span>Service supervision</span><span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="component-panel" id="component-panel" role="tabpanel" tabindex="0" aria-labelledby="tab-musl"><div class="component-symbol" aria-hidden="true">{ }</div><h3 id="component-title">A lean foundation.</h3><p id="component-description">musl provides the C standard library at the heart of the target system. LTR builds its core around this compact foundation, with no GNU runtime libraries in the target image.</p><span class="component-foot" id="component-foot">LIBRARY / musl</span></div>
+      </div>
+    </section>
+
+    <section class="package-section section" aria-labelledby="package-heading">
+      <div><h2 id="package-heading">Meet your<br>package manager<span class="accent">.</span></h2><p>LPM is LTR’s own package manager, written in Rust with a C filesystem helper. Inspect source recipes, plan builds, and resolve binary package dependencies.</p><span class="text-note">Source recipes: .l1pm &nbsp; / &nbsp; Binary packages: .L1P</span></div>
+      <div class="terminal"><div class="terminal-top"><span>lpm — recipe workflow</span><span aria-hidden="true">─ &nbsp; □</span></div><div class="terminal-body"><p class="terminal-comment"># Check a source recipe</p><code><span>$</span> lpm check recipes/LLVM.l1pm</code><p class="terminal-comment"># Plan its build dependencies</p><code><span>$</span> lpm plan recipes/LLVM.l1pm<br>  --repo recipes</code><span class="terminal-cursor" aria-hidden="true"></span></div><p class="terminal-note">Run from the source tree with LPM available. Compiling on the target requires a separate compiler SDK.</p></div>
+    </section>
+
+    <section class="start section" id="start" aria-labelledby="start-heading">
+      <div class="start-top"><h2 id="start-heading">Your next<br>starting point<span>.</span></h2><div><p>Start with the boot-core development image. Build the source, boot a virtual machine, and get to know the system.</p><a class="button button-dark" href="#build-guide">Get the build instructions <span aria-hidden="true">↘</span></a></div></div>
+      <div class="build-guide" id="build-guide"><div class="build-header"><h3>Build from source</h3><div class="architecture" role="group" aria-label="Build architecture"><button type="button" aria-pressed="true" data-arch="x86_64">x86_64</button><button type="button" aria-pressed="false" data-arch="i686">i686</button></div></div><div class="command"><code id="build-command">./build-all.sh --all</code><button id="copy" type="button">Copy <span aria-hidden="true">↗</span></button></div><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p><p>Run in the project root on an Artix host with Python 3.12+, a working GCC toolchain, pacman metadata, bsdtar, curl and network access.</p><p class="output-path">OUTPUT <code id="output-path">out/lighting-the-rain-transform-x86_64-boot-core.iso</code></p></div>
+      <div class="release-notes"><h3>Before you boot</h3><div><details><summary>What’s in the image? <span aria-hidden="true">+</span></summary><p>Linux, musl, BusyBox, dash, s6, Limine, LPM, wired DHCP, curl/LibreSSL, OpenSSH, console Vim, libarchive, selected firmware and BIOS/UEFI installation tools.</p></details><details><summary>What’s still in development? <span aria-hidden="true">+</span></summary><p>This is a boot-core development image. Wi-Fi/iwd, mdevd, privilege tools and the on-target compiler SDK still need integration. The host bootstrap currently targets Artix.</p></details><details><summary>How do I test it? <span aria-hidden="true">+</span></summary><p>After building, run <code>python3 tools/boot_test.py</code> for the BIOS smoke test, or add <code>--uefi</code> for UEFI. The live image uses an unauthenticated local development console; no SSH server is enabled.</p></details></div></div>
+    </section>
+  </main>
+  <footer><div class="footer-top"><a class="brand" href="#home"><img src="assets/logo.svg" alt=""><span>LTR.</span></a><p>Lighting the Rain Transform<br><span>A Linux distro, from the source up.</span></p><button id="replay" type="button">Replay the entrance <span aria-hidden="true">↻</span></button><a href="#home">Back to top ↑</a></div><div class="footer-word" aria-hidden="true">TRANSFORM.</div><div class="footer-bottom"><span>Built from source. Open to possibility.</span><button type="button" id="motion" aria-pressed="false">Motion: on</button></div></footer>
+</body>
+</html>
